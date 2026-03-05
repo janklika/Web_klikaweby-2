@@ -139,4 +139,39 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Odstranění "index.html" a dynamické updatování URL v závislosti na scrollu (aby bylo vidět jen "kde se člověk nachází")
+    const cleanCurrentUrl = () => {
+        const url = new URL(window.location);
+        if (url.pathname.endsWith('index.html')) {
+            const newPath = url.pathname.replace(/index\.html$/, '');
+            // Necháme hash (#sekce), pouze smazat index.html pro čistý vzhled
+            window.history.replaceState(null, '', newPath + url.search + url.hash);
+        }
+    };
+    cleanCurrentUrl();
+
+    const scrollSections = document.querySelectorAll('section[id], header[id]');
+    if (scrollSections.length > 0) {
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    const url = new URL(window.location);
+
+                    // Bezpečně přepíšeme URL pouze tehdy, zmenil-li se hash
+                    if (window.location.hash !== `#${id}`) {
+                        const newPath = url.pathname.replace(/index\.html$/, '');
+                        window.history.replaceState(null, '', newPath + url.search + `#${id}`);
+                    }
+                }
+            });
+        }, {
+            rootMargin: '-30% 0px -60% 0px'
+        });
+
+        scrollSections.forEach(section => {
+            scrollObserver.observe(section);
+        });
+    }
 });
