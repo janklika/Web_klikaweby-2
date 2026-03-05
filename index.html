@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Klika | Tvorba webových stránek na míru</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description"
+        content="Vytvářím moderní a funkční weby pro malé firmy a OSVČ, které přivádějí nové zákazníky.">
+    <meta property="og:title" content="Jan Klika | Tvorba webových stránek na míru">
+    <meta property="og:description"
+        content="Vytvářím moderní a funkční weby pro malé firmy a OSVČ, které přivádějí nové zákazníky.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="Obrazky/favicon_klikaweby.png">
+    <link rel="canonical" href="https://www.klikaweby.cz">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Jan Klika - Tvorba webových stránek",
+      "image": "Obrazky/logo_klikaweby.png",
+      "email": "j.klika@post.cz",
+      "telephone": "+420 732 545 963",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Horní Bukovsko 16",
+        "addressLocality": "Dolní Bukovsko",
+        "postalCode": "373 65",
+        "addressCountry": "CZ"
+      },
+      "url": "https://www.klikaweby.cz"
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="Obrazky/logo_klikaweby.png" alt="Klikaweby Logo">
+            </a>
+
+            <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="main-nav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#uvod">Úvod</a></li>
+                    <li><a href="#co-nabizim">Co nabízím</a></li>
+                    <li><a href="#spoluprace">Spolupráce</a></li>
+                    <li><a href="#kontakty">Kontakty</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <!-- Background element imitating the 'Aa' watermark from the image -->
+            <div class="hero-watermark">Ww</div>
+
+            <!-- Hand drawn top border -->
+            <div class="hero-top-border">
+                <svg viewBox="0 0 1200 20" preserveAspectRatio="none">
+                    <path d="M0,10 Q150,20 300,10 T600,10 T900,10 T1200,10" fill="none" stroke="#333333"
+                        stroke-width="2" />
+                </svg>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Tvorba <br> webových stránek <br> <span class="highlight">na míru</span></h1>
+
+                    <p class="hero-subtitle"><strong>Moderní a funkční weby</strong></p>
+
+                    <p class="hero-text">
+                        Vytvářím moderní a funkční weby pro malé firmy a OSVČ, které přivádějí nové zákazníky.
+                    </p>
+
+                    <a href="#co-nabizim" class="btn btn-primary btn-hero">To chci.</a>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <img src="Obrazky/Webari_anime/webar_anime_pocitac.png" alt="Webař pracuje na počítači"
+                        class="hero-img">
+
+                    <!-- Bubbles around the image -->
+                    <div class="bubble b-1"><i class="fa-solid fa-paintbrush mr-1"></i> Vzhled</div>
+                    <div class="bubble b-2"><i class="fa-solid fa-sitemap mr-1"></i> Struktura</div>
+                    <div class="bubble b-3"><i class="fa-solid fa-compass mr-1"></i> Orientace</div>
+                    <div class="bubble b-4"><i class="fa-solid fa-shield-halved mr-1"></i> Zabezpečení</div>
+                    <div class="bubble b-5"><i class="fa-solid fa-gauge-high mr-1"></i> Rychlost</div>
+                    <div class="bubble b-6"><i class="fa-solid fa-mobile-screen mr-1"></i> Responzivita</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Úvod Section -->
+        <section id="uvod" class="section bg-texture reveal">
+            <div class="container section-container">
+                <h2 class="section-title">Společně vytvoříme webové stránky, které budou</h2>
+
+                <div class="cards-grid cols-2">
+                    <!-- Karta 1 -->
+                    <div class="feature-card">
+                        <img src="Obrazky/Ikony/Jednoduche_a_prehledne.png" alt="Jednoduché a přehledné" class="icon"
+                            loading="lazy">
+                        <div class="feature-content">
+                            <h3>Jednoduché a přehledné</h3>
+                            <p>Čistý a nerušivý vzhled.<br>
+                                Jasná struktura a&nbsp;snadná orientace.<br>
+                                Dobrá čitelnost a&nbsp;příjemné barvy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Karta 2 -->
+                    <div class="feature-card">
+                        <img src="Obrazky/Ikony/Funkcni_a_rychle.png" alt="Funkční a rychlé" class="icon"
+                            loading="lazy">
+                        <div class="feature-content">
+                            <h3>Funkční a rychlé</h3>
+                            <p>Rychlé načítání a&nbsp;zabezpečení.<br>
+                                Optimalizace pro vyhledávače.<br>
+                                Plná funkčnost na mobilech i&nbsp;počítačích.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer-text">
+                    <p class="h3-style">Chcete mít takové webové stránky? To si budeme rozumět.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co nabízím (Intro) Section -->
+        <section id="co-nabizim" class="section section-co-nabizim reveal">
+            <div class="container">
+                <h2 class="section-title">Co nabízím</h2>
+
+                <div class="cards-grid cols-3 mt-4">
+                    <div class="offer-card reveal">
+                        <img src="Obrazky/Ikony/Tvorba_webovych_stranek.png" alt="Tvorba webových stránek" class="icon"
+                            loading="lazy">
+                        <h4>1/ Tvorba webových stránek</h4>
+                        <p>Vytvoříme webové stránky, které budou magnetem pro vyhledávače, s&nbsp;obsahem, který zaujme
+                            a&nbsp;prezentací, která vás vystihne.</p>
+                        <a href="#tvorba" class="btn btn-outline">To chci</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="Obrazky/Ikony/Editace_a_pece_o_webove_stranky.png"
+                            alt="Editace a péče o webové stránky" class="icon" loading="lazy">
+                        <h4>2/ Editace a péče o&nbsp;webové stránky</h4>
+                        <p>Udržím váše webové stránky v&nbsp;top formě – bleskově rychlé, neprůstřelně bezpečné
+                            a&nbsp;vždy snadno k&nbsp;nalezení.</p>
+                        <a href="#pece" class="btn btn-outline">To se hodí</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <img src="Obrazky/Ikony/Neco_navic.png" alt="Něco navíc" class="icon" loading="lazy">
+                        <h4>3/ Něco navíc</h4>
+                        <p>Můžu vám připravit texty na web, pomoci s&nbsp;výběrem nebo pořízením fotografií
+                            a&nbsp;vytvořit jednoduché logo,</p>
+                        <a href="#navic" class="btn btn-outline">Zajímá mě to</a>
+                    </div>
+                </div>
+
+                <div class="section-intro-split mt-6">
+                    <div class="intro-content">
+                        <p class="brand-text-large text-highlight">Chcete, aby lidé ve vašem okolí věděli, co umíte
+                            a&nbsp;jak jim
+                            můžete pomoci?</p>
+                        <p class="brand-text-large">Rád si s&nbsp;vámi nezávazně zavolám na 30&nbsp;minut
+                            a&nbsp;probereme vaše představy.</p>
+                        <a href="#kontakty" class="btn btn-secondary mt-3">Konzultace zdarma</a>
+                    </div>
+                    <div class="intro-image">
+                        <img src="Obrazky/Ostatni/konzultace.png" alt="Konzultace a práce na webu" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Detailní nabídka: Tvorba webových stránek -->
+        <section id="tvorba" class="section reveal">
+            <div class="container container-sm">
+                <h2 class="large-num-title">1/ Tvorba webových stránek na míru</h2>
+                <div class="text-center mb-5">
+                    <p class="brand-text-large">Vyberte si cestu, která vám dává největší smysl. <br>Hledáte
+                        jednoduchost bez starostí, nebo chcete mít svůj web plně pod kontrolou?</p>
+                </div>
+
+                <div class="cards-grid cols-2 mt-4">
+                    <div class="price-card reveal">
+                        <img src="Obrazky/Ikony/Web_bez_administrace.png" alt="Web bez redakčního systému" class="icon"
+                            loading="lazy">
+                        <h4>Webová vizitka <br>(bez administrace)</h4>
+                        <p>Ideální volba, pokud hledáte moderní online vizitku. Vše důležité na jedné stránce,
+                            reprezentativní design a&nbsp;provoz bez nutnosti vašich zásahů.</p>
+                        <p><strong>Zahrnuje:</strong></p>
+                        <ul class="check-list">
+                            <li>Moderní a&nbsp;vzdušný design</li>
+                            <li>Přehledná struktura obsahu</li>
+                            <li>Plná responzivita (mobily/tablety)</li>
+                            <li>Základní SEO nastavení</li>
+                            <li>Blesková rychlost a&nbsp;bezpečnost</li>
+                        </ul>
+                        <div class="price-tag">od 10&nbsp;000&nbsp;Kč</div>
+                    </div>
+
+                    <div class="price-card primary-border">
+                        <img src="Obrazky/Ikony/Web_s_administraci.png" alt="Web s redakčním systémem" class="icon"
+                            loading="lazy">
+                        <h4>Web s&nbsp;administrací <br>(redakční systém)</h4>
+                        <p>Živý web, který roste s&nbsp;vámi. Díky přehledné administraci si můžete sami měnit texty,
+                            přidávat projekty nebo psát aktuality bez čekání na webaře.</p>
+                        <p><strong>Zahrnuje:</strong></p>
+                        <ul class="check-list">
+                            <li>Snadná správa obsahu (administrace)</li>
+                            <li>Možnost budoucího rozšiřování</li>
+                            <li>Blog, projekty nebo fotogalerie</li>
+                            <li>Pokročilé nástroje pro SEO</li>
+                            <li>Plně pod vaší kontrolou</li>
+                        </ul>
+                        <div class="price-tag">od 15&nbsp;000&nbsp;Kč</div>
+                    </div>
+                </div>
+
+                <div class="text-center btn-detail-spacing">
+                    <a href="#kontakty" class="btn btn-primary">Kontaktujte mě</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailní nabídka: Editace a péče -->
+        <section id="pece" class="section bg-texture reveal">
+            <div class="container container-sm">
+                <h2 class="section-title-sm">Aby stránky pracovaly tak jak mají</h2>
+                <h3 class="large-num-title">2/ Editace a péče o&nbsp;webové stránky</h3>
+
+                <div class="text-center mb-4">
+                    <p>Aby váš web fungoval tak, jak má, potřebuje občasnou péči. Aktualizace, zálohy i&nbsp;technické
+                        věci klidně nechte na mně.<br>O web se starám pravidelně 3x do roka.<br>Rád vám pomůžu
+                        i&nbsp;s&nbsp;texty, fotkami nebo přidáním nových funkcí.</p>
+                </div>
+
+                <div class="cards-grid cols-2">
+                    <div class="price-card">
+                        <img src="Obrazky/Ikony/Udrzba.png" alt="Údržba" class="icon" loading="lazy">
+                        <h4>1x údržba</h4>
+                        <ul class="check-list">
+                            <li>pravidelná záloha webu</li>
+                            <li>aktualizace pluginů</li>
+                            <li>kontrola stavu webu</li>
+                            <li>správa 3x do roka</li>
+                        </ul>
+                        <div class="price-tag">350&nbsp;Kč</div>
+                    </div>
+
+                    <div class="price-card">
+                        <img src="Obrazky/Ikony/Editace.png" alt="Editace" class="icon" loading="lazy">
+                        <h4>Editace</h4>
+                        <ul class="check-list">
+                            <li>úprava vzhledu webu</li>
+                            <li>aktualizace textů</li>
+                            <li>rozšíření možností webu</li>
+                            <li>jiné úpravy</li>
+                        </ul>
+                        <div class="price-tag">900&nbsp;Kč/h</div>
+                    </div>
+                </div>
+
+                <div class="text-center btn-detail-spacing">
+                    <a href="#kontakty" class="btn btn-primary">Kontaktujte mě</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailní nabídka: Něco navíc -->
+        <section id="navic" class="section reveal">
+            <div class="container container-sm">
+                <h2 class="section-title-sm">Může se hodit</h2>
+                <h3 class="large-num-title">3/ Něco navíc</h3>
+
+                <div class="service-list mt-4">
+                    <div class="service-item">
+                        <img src="Obrazky/Ikony/Texty_na_web.png" alt="Texty na web" class="icon list-icon"
+                            loading="lazy">
+                        <div class="service-content">
+                            <h4>Texty na web</h4>
+                            <p>Kvalitní texty jsou základ úspěšné prezentace.<br>Připravím obsah, který je srozumitelný,
+                                přehledný a&nbsp;přizpůsobený tomu, co chceš komunikovat.<br>Zahrnuje úpravu stávajících
+                                textů nebo tvorbu nových od nuly.</p>
+                            <div class="price-row">1&nbsp;500–3&nbsp;000&nbsp;Kč <span>(pro One page web; u více stránek
+                                    dle rozsahu 2&nbsp;500–6&nbsp;000&nbsp;Kč)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <img src="Obrazky/Ikony/Logo.png" alt="Logo" class="icon list-icon" loading="lazy">
+                        <div class="service-content">
+                            <h4>Logo</h4>
+                            <p>Základní vizuální identita.<br>Vytvořím jednoduché, čisté a&nbsp;moderní logo, které bude
+                                ladit s&nbsp;celkovým stylem webu.</p>
+                            <div class="price-row">1&nbsp;000–3&nbsp;000&nbsp;Kč <span>(dle náročnosti a počtu
+                                    návrhů)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <img src="Obrazky/Ikony/Fotografie.png" alt="Fotografie" class="icon list-icon" loading="lazy">
+                        <div class="service-content">
+                            <h4>Fotografie</h4>
+                            <p>Pomůžu s&nbsp;výběrem vhodných fotografií z&nbsp;fotobank, případně upravím tvoje vlastní
+                                snímky tak, aby na webu působily profesionálně.<br>Může jít o&nbsp;výběr, retuše,
+                                sjednocení stylu nebo doporučení vizuálního směru</p>
+                            <div class="price-row">300–1&nbsp;000&nbsp;Kč <span>(výběr + úpravy; vlastní focení dle
+                                    domluvy)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center btn-detail-spacing">
+                    <a href="#kontakty" class="btn btn-primary">Kontaktujte mě</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co zahrnuje a nezahrnuje -->
+        <section class="section bg-texture reveal">
+            <div class="container container-sm">
+                <h2 class="section-title">Co cena zahrnuje a nezahrnuje:</h2>
+
+                <div class="accordion-wrapper mt-4">
+                    <!-- Zahrnuje -->
+                    <div class="acc-col">
+                        <div class="acc-header flex-center mb-3">
+                            <img src="Obrazky/Ikony/Ano.png" alt="Ano" class="inline-icon" loading="lazy">
+                            <h3 class="mb-0 ml-2">Co zahrnuje</h3>
+                        </div>
+
+                        <div class="accordion">
+                            <details>
+                                <summary>Úvodní schůzka <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Máme na sebe 90&nbsp;minut. Můžeme se potkat osobně, nebo
+                                    online. Probereme detailně obsah webových stránek, jejich strukturu, vzhled
+                                    a&nbsp;další.</div>
+                            </details>
+                            <details>
+                                <summary>Doména a hosting <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Zařídím vám hosting a&nbsp;doménu s&nbsp;jejímž výběrem mohu
+                                    pomoci.</div>
+                            </details>
+                            <details>
+                                <summary>Návrh webové struktury <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">Udělám přehlednou strukturu, která zajistí snadnou
+                                    a&nbsp;jasnou orientaci po webových stránkách.</div>
+                            </details>
+                            <details>
+                                <summary>Zabezpečení <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Každým webovým stránkám dávám automaticky bezpečnostní
+                                    certifikát SSL.</div>
+                            </details>
+                            <details>
+                                <summary>Mobilní přizpůsobení <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">Většina online světa dnes funguje na mobilních telefonech,
+                                    proto budou vaše webové stránky na těchto zařízeních nejen skvěle vypadat, ale
+                                    i&nbsp;bez problémů fungovat.</div>
+                            </details>
+                            <details>
+                                <summary>Základní SEO <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Zajistím základní optimalizaci pro vyhledávače a&nbsp;propojení
+                                    s&nbsp;Google Search Console, aby vás uživatelé mohli snadno najít.</div>
+                            </details>
+                            <details>
+                                <summary>Cookie lišta <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Pokud bude potřeba, rád ji připravím.</div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Nezahrnuje -->
+                    <div class="acc-col">
+                        <div class="acc-header flex-center mb-3">
+                            <img src="Obrazky/Ikony/Ne.png" alt="Ne" class="inline-icon" loading="lazy">
+                            <h3 class="mb-0 ml-2">Co nezahrnuje</h3>
+                        </div>
+
+                        <div class="accordion">
+                            <details>
+                                <summary>Cena za doménu a hosting <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">Doména i&nbsp;hosting se platí jednou ročně přímo poskytovateli
+                                    služby, a&nbsp;platbu provádíte vy jako klient. S&nbsp;jejich výběrem
+                                    i&nbsp;nastavením vám ale rád pomohu.</div>
+                            </details>
+                            <details>
+                                <summary>Tvorba finálních textů <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">Finální texty si připravuje klient, ale nenechám vás v&nbsp;tom
+                                    samotné — vytvoříme si společně přehlednou strukturu, podle které se vám bude psát
+                                    mnohem snadněji. Pokud budete chtít, texty mohu zpracovat za vás, případně doporučím
+                                    copywritera. Cena se stanovuje podle rozsahu a&nbsp;tématu.</div>
+                            </details>
+                            <details>
+                                <summary>Fotografie <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Dobré fotografie dělají velký rozdíl. Pokud nemáte vlastní,
+                                    ráda vyhledám snímky ve fotobankách nebo je mohu nafotit. Cena se odvíjí od počtu
+                                    fotografií a&nbsp;úprav.</div>
+                            </details>
+                            <details>
+                                <summary>Průběžná údržba webu <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">Webové stránky potřebují průběžnou péči — aktualizace, zálohy
+                                    i&nbsp;kontrolu, aby vše fungovalo tak, jak má. Nabízím jednorázovou údržbu za
+                                    350&nbsp;Kč, kterou standardně provádím 3-4 do roka.</div>
+                            </details>
+                            <details>
+                                <summary>Úpravy po spuštění webu <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">V prvním týdnu ostrého provozu máte drobné úpravy zdarma. Další
+                                    editace již spuštěných webových stránek pak provádím za standardní sazbu 900&nbsp;Kč
+                                    za hodinu.</div>
+                            </details>
+                            <details>
+                                <summary>Zaškolení do DIVI <i class="fa-solid fa-chevron-down acc-icon"></i></summary>
+                                <div class="acc-content">Chcete si obsah webových stránek spravovat sami? Nabízím
+                                    jednorázové zaškolení do administrace a&nbsp;editace webu v&nbsp;délce asi 1,5
+                                    hodiny. Cena je 1&nbsp;400&nbsp;Kč.</div>
+                            </details>
+                            <details>
+                                <summary>Napojení na Google Analytics <i class="fa-solid fa-chevron-down acc-icon"></i>
+                                </summary>
+                                <div class="acc-content">Google Analytics je analytický nástroj, který monitoruje provoz
+                                    na webových stránkách. Sbírá důležitá data a&nbsp;nabízí jasné přehledy o&nbsp;tom,
+                                    jak lidé váš webové stránky používají.</div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kdo za tím stojí Section -->
+        <section class="section py-6 reveal">
+            <div class="container split-layout">
+                <div class="split-image">
+                    <img src="Obrazky/Lide/jan_klika.png" alt="Honza webař" class="author-img" loading="lazy"
+                        onerror="this.onerror=null; this.src='Obrazky/Lide/webar_honza_profil.png'">
+                    <!-- Added fallback image to webar_honza_profil.png since jan_klika.jpg wasn't listed, only jan_klika.png was! -->
+                </div>
+                <div class="split-text pl-text">
+                    <h2 class="section-title text-left">Kdo za tím stojí?</h2>
+                    <h3>webař Honza</h3>
+                    <p>Jsem vystudovaný dřevař a&nbsp;nábytkář, ale život mě nakonec zavedl do sociálních služeb, kde
+                        pracuji dodnes.</p>
+                    <p>K&nbsp;webům jsem se dostal nenápadně — vždycky mě to táhlo ke grafice, designu a&nbsp;focení,
+                        a&nbsp;z&nbsp;toho byl jen krůček k&nbsp;tvorbě webových stránek. Velký impuls mi dal
+                        i&nbsp;kurz Magdalény Bouškové (webykvalitne.cz), který mi pomohl dát mému koníčku jasnější
+                        směr. Webařina je pro mě prostor, kde můžu spojit kreativitu, estetiku i&nbsp;technickou stránku
+                        věcí.</p>
+                    <p>A&nbsp;když je třeba vypnout, sáhnu po dobré kávě nebo vyrazím ven — příroda je pro mě největší
+                        inspirací.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spolupráce Section -->
+        <section id="spoluprace" class="section bg-texture reveal">
+            <div class="container container-sm">
+                <h2 class="section-title">Spolupráce při tvorbě webových stránek</h2>
+                <div class="flex-center flex-justify-center mb-5">
+                    <img src="Obrazky/Ikony/Spoluprace.png" alt="Spolupráce" class="inline-icon" loading="lazy">
+                    <h3 class="mb-0 ml-2 text-center">Jak vzniká váš web</h3>
+                </div>
+
+                <div class="timeline mt-4">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-step">1</div>
+                        <div class="timeline-content">
+                            <h4>Stanovíme cíl</h4>
+                            <p>Nejprve si řekneme, co má web splňovat, pro koho je určený a&nbsp;jaký výsledek od něj
+                                očekáváte. Díky tomu bude mít celý projekt jasný směr.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-step">2</div>
+                        <div class="timeline-content">
+                            <h4>Připravím koncept a strukturu</h4>
+                            <p>Navrhnu logické uspořádání stránek a&nbsp;obsah tak, aby byl web přehledný
+                                a&nbsp;návštěvníci se na něm snadno orientovali.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-step">3</div>
+                        <div class="timeline-content">
+                            <h4>Navrhnu a vytvořím web</h4>
+                            <p>Zpracujeme vizuální podobu a&nbsp;pustím se do samotné realizace. Důraz kladu na
+                                jednoduchý design, rychlost načítání a&nbsp;pohodlné používání.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-step">4</div>
+                        <div class="timeline-content">
+                            <h4>Otestuji a spustím online</h4>
+                            <p>Vše doladím, zkontroluji funkčnost a&nbsp;připravím web ke spuštění, aby byl připravený
+                                bez problémů fungovat od prvního dne.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Kontakty Section -->
+        <section id="kontakty" class="section bg-beige reveal">
+            <div class="container split-layout split-equal split-divider-line">
+                <div class="split-text">
+                    <h2 class="section-title text-left">Chcete jednoduchý a funkční web, který bude fungovat?</h2>
+                    <p>Napište mi. Rád se na váš projekt podívám.<br>Pokud chcete, abych rychleji dostal představu
+                        o&nbsp;vašem projektu, můžete vyplnit dotazník.</p>
+                    <a href="dotaznik.html" class="btn btn-secondary mt-3 mb-4">Vyplnit dotazník</a>
+                </div>
+
+                <div class="split-info contact-card">
+                    <h3>Jan Klika</h3>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:j.klika@post.cz">j.klika@post.cz</a></p>
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:+420732545963"></a>+420 732 545 963</a></p>
+                    <a href="mailto:j.klika@post.cz" class="btn btn-primary mt-3">Kontaktujte mě</a>
+
+                    <hr class="card-hr">
+
+                    <div class="business-details text-small">
+                        <p>PO-PÁ / 8:00-17:00</p>
+                        <p>IČ: 08479500</p>
+                        <p>Nejsem plátcem DPH.</p>
+                        <p>Zapsán u živnostenského úřadu České Budějovice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="obchodni-podminky.html">Obchodní podmínky</a>
+                <a href="zasady-ochrany.html">Zásady ochrany osobních údajů</a>
+            </div>
+            <div class="footer-copy">
+                <p>Klikaweby© Všechyn práva vyhrazena</p>
+                <p>Jan Klika, Horní Bukovsko 16, 373 65 Dolní Bukovsko</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner (s možností odmítnout + příprava GA) -->
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p>Tento web používá k personalizaci obsahu a analýze návštěvnosti soubory cookie. <a
+                    href="zasady-ochrany.html" style="text-decoration: underline;">Více informací</a>.</p>
+            <div class="cookie-buttons" style="display: flex; gap: 10px;">
+                <button id="cookie-accept" class="btn btn-primary btn-sm">Přijmout vše</button>
+                <button id="cookie-decline" class="btn btn-outline btn-sm">Odmítnout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Zpět nahoru">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

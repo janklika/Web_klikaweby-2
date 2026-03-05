@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotazník | Jan Klika – Tvorba webových stránek</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description"
+        content="Vyplňte dotazník a pomozte mi lépe pochopit váš projekt. Tvorba webů na míru – Jan Klika.">
+    <link rel="icon" type="image/png" href="Obrazky/favicon_klikaweby.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: #dddfdf;
+            --secondary-color: #ffbf00;
+            --btn-bg: #fff4e6;
+            --text-color: #333333;
+            --font-main: 'Outfit', sans-serif;
+            --font-brand: 'Special Elite', cursive, monospace;
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+            --brutal-border: 2px solid var(--text-color);
+            --brutal-shadow: 4px 4px 0 var(--text-color);
+            --box-shadow-soft: 0 4px 12px rgba(51, 51, 51, 0.07);
+            --transition-fast: 0.2s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-color);
+            background-color: #f9f9f7;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* ---- Header ---- */
+        .page-header {
+            background: #fff;
+            border-bottom: var(--brutal-border);
+            padding: 1.25rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-inner a.logo img {
+            height: 70px;
+        }
+
+        .back-link {
+            font-family: var(--font-brand);
+            font-size: 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-fast);
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        /* ---- Main layout ---- */
+        main {
+            max-width: 860px;
+            margin: 3rem auto 5rem;
+            padding: 0 1.5rem;
+        }
+
+        .form-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .form-hero h1 {
+            font-family: var(--font-brand);
+            font-size: clamp(2rem, 5vw, 3rem);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .form-hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ---- Form card ---- */
+        .form-card {
+            background: #fff;
+            border: var(--brutal-border);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--brutal-shadow);
+            padding: 3rem 3.5rem;
+        }
+
+        @media(max-width: 600px) {
+            .form-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* ---- Form sections ---- */
+        .form-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+        }
+
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .form-section-title {
+            font-family: var(--font-brand);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-color);
+        }
+
+        .form-section-title .num {
+            background: var(--secondary-color);
+            border: var(--brutal-border);
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            box-shadow: 2px 2px 0 var(--text-color);
+        }
+
+        /* ---- Fields ---- */
+        .field-group {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .field-group.cols-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media(max-width: 640px) {
+            .field-group.cols-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        label .optional {
+            font-weight: 400;
+            color: #888;
+            font-size: 0.85rem;
+            margin-left: 0.3rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: var(--brutal-border);
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            background: #fdfdfb;
+            color: var(--text-color);
+            transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ---- Radio & Checkbox ---- */
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.65rem 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: background var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .radio-option:hover,
+        .checkbox-option:hover {
+            background: var(--btn-bg);
+            border-color: var(--secondary-color);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--secondary-color);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        /* ---- Conditional field ---- */
+        .conditional-field {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--btn-bg);
+            border-radius: 8px;
+            border: 1px dashed rgba(0, 0, 0, 0.15);
+        }
+
+        .conditional-field.visible {
+            display: block;
+        }
+
+        /* ---- Submit button ---- */
+        .form-submit-area {
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-family: var(--font-brand);
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--secondary-color);
+            color: var(--text-color);
+            border: var(--brutal-border);
+            box-shadow: var(--brutal-shadow);
+            cursor: pointer;
+            transition: var(--transition-fast);
+            border-radius: 0;
+        }
+
+        .btn-submit:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--text-color);
+        }
+
+        .btn-submit:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0 0 0 var(--text-color);
+        }
+
+        .submit-note {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* ---- Thank you screen ---- */
+        #thank-you {
+            display: none;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        #thank-you .big-icon {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        #thank-you h2 {
+            font-family: var(--font-brand);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #thank-you p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-family: var(--font-brand);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--btn-bg);
+            color: var(--text-color);
+            border: var(--brutal-border);
+            box-shadow: var(--brutal-shadow);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .btn-back:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--text-color);
+        }
+
+        /* ---- Footer ---- */
+        .page-footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid rgba(0, 0, 0, 0.07);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Obrazky/logo_klikaweby.png" alt="Klikaweby logo">
+            </a>
+            <a href="index.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Zpět na web
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-hero">
+            <h1>Dotazník</h1>
+            <p>Pomožte mi lépe pochopit váš projekt. Díky těmto informacím vám budu moci dát přesnější představu o ceně
+                a postupu.</p>
+        </div>
+
+        <div class="form-card">
+            <form id="contact-form" action="https://formspree.io/f/xqedrjga" method="POST">
+
+                <!-- Sekce 1: Kontaktní údaje -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">1</span>
+                        Vaše kontaktní údaje
+                    </div>
+                    <div class="field-group cols-3">
+                        <div class="field">
+                            <label for="jmeno">Jméno a příjmení</label>
+                            <input type="text" id="jmeno" name="jmeno" placeholder="Jana Nováková" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="vas@email.cz" required>
+                        </div>
+                        <div class="field">
+                            <label for="telefon">Telefon <span class="optional">(nepovinné)</span></label>
+                            <input type="tel" id="telefon" name="telefon" placeholder="+420 123 456 789">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sekce 2: Projekt -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">2</span>
+                        Váš projekt
+                    </div>
+                    <div class="field">
+                        <label for="popis">Popište prosím v krátkosti svůj projekt a co vše by váš web měl umět.</label>
+                        <textarea id="popis" name="popis"
+                            placeholder="Jsem grafik a hledám jednoduchou prezentaci svého portfolia…"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <!-- Sekce 3: Typ webu -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">3</span>
+                        O jaký web byste měl/a zájem?
+                    </div>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="typ_webu" value="Webová vizitka" id="typ-vizitka">
+                            Webová vizitka – jednoduchá prezentace bez administrace
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="typ_webu" value="Web s administrací" id="typ-administrace">
+                            Web s administrací – sám si pak upravuji obsah
+                        </label>
+                    </div>
+
+                    <div id="admin-detail" class="conditional-field">
+                        <div class="field">
+                            <label for="stranky">Pokud web s administrací, už víte jaké stránky to budou? <span
+                                    class="optional">(např. úvod, služby, kontakt…)</span></label>
+                            <input type="text" id="stranky" name="stranky_webu"
+                                placeholder="Úvod, O mně, Ceník, Galerie, Kontakt">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sekce 4: Doména -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">4</span>
+                        Doména
+                    </div>
+                    <div class="field">
+                        <label for="domena">Máte už doménu? Pokud ano, jakou a u jakého poskytovatele.</label>
+                        <input type="text" id="domena" name="domena" placeholder="www.mojedomena.cz (Wedos, Forpsi, …)">
+                    </div>
+                </div>
+
+                <!-- Sekce 5: Inspirace -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">5</span>
+                        Inspirace a styl
+                    </div>
+                    <div class="field">
+                        <label for="inspirace">Jsou nějaké weby, které vás zaujaly? Čím? Lépe tak poznám, jaký styl se
+                            vám líbí. <span class="optional">(připojte i odkazy)</span></label>
+                        <textarea id="inspirace" name="inspirace"
+                            placeholder="Líbí se mi web www.priklad.cz – hlavně díky přehlednosti a tmavému stylu…"></textarea>
+                    </div>
+                </div>
+
+                <!-- Sekce 6: Podklady -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">6</span>
+                        Jaké podklady máte / dodáte?
+                    </div>
+                    <p style="font-size:0.9rem; color:#666; margin-bottom:1rem;">Vše zmíněné budeme pro web potřebovat,
+                        ale samozřejmě vše můžeme spolu poladit.</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Logo"> Logo
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Favicon"> Favicon (ikonka v záložce
+                            prohlížeče)
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Fotky a obrázky"> Fotky / obrázky
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Brandové barvy"> Brandové barvy
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Fonty"> Fonty
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Obchodní podmínky"> Obchodní podmínky
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="GDPR"> GDPR – podmínky ochrany osobních
+                            údajů
+                        </label>
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="podklady[]" value="Nic z uvedeného"> Nic z uvedeného nemám
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Sekce 7: Texty -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">7</span>
+                        Texty na web
+                    </div>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="texty" value="Dodám ve finální podobě">
+                            Dodám ve finální podobě
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="texty" value="Chci si napsat, ale ocením korekturu">
+                            Chci si napsat sám/sama, ale ocenil/a bych korekturu
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="texty" value="Chci texty napsat od vás">
+                            Texty si chci nechat napsat od vás
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Sekce 8: Cokoliv dalšího -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="num">8</span>
+                        Cokoliv dalšího
+                    </div>
+                    <div class="field">
+                        <label for="doplneni">Chcete ještě něco dodat? <span class="optional">(nepovinné)</span></label>
+                        <textarea id="doplneni" name="doplneni"
+                            placeholder="Např. mám specifické požadavky, termín, e-shop v plánu…"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-submit-area">
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-paper-plane" style="margin-right: 0.5rem;"></i> Odeslat dotazník
+                    </button>
+                    <p class="submit-note">Ozvu se vám co nejdříve. Žádný spam, jen odpověď.</p>
+                </div>
+
+            </form>
+
+            <!-- Potvrzení po odeslání -->
+            <div id="thank-you">
+                <div class="big-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h2>Dotazník odeslán!</h2>
+                <p>Moc děkuju za vyplnění. Ozvu se vám co nejdříve.</p>
+                <a href="index.html" class="btn-back">
+                    <i class="fa-solid fa-house" style="margin-right:0.4rem;"></i> Zpět na web
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <p>Jan Klika &bull; <a href="mailto:j.klika@post.cz" style="color:inherit;">j.klika@post.cz</a> &bull; +420 732
+            545 963</p>
+    </footer>
+
+    <script>
+        // Zobrazit/skrýt pole pro typ webu s administrací
+        const radios = document.querySelectorAll('input[name="typ_webu"]');
+        const adminDetail = document.getElementById('admin-detail');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.value === 'Web s administrací' && radio.checked) {
+                    adminDetail.classList.add('visible');
+                } else {
+                    adminDetail.classList.remove('visible');
+                }
+            });
+        });
+
+        // Formspree AJAX submit
+        const form = document.getElementById('contact-form');
+        const thankYou = document.getElementById('thank-you');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                form.style.display = 'none';
+                thankYou.style.display = 'block';
+            } else {
+                alert('Nastala chyba při odesílání. Zkuste prosím znovu nebo mě kontaktujte přímo na j.klika@post.cz');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
