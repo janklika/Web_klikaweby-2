@@ -1425,7 +1425,7 @@ details[open] .acc-icon {
     }
 
     /* Nadpis "Společně vytvoříme..." - zmenšit */
-    #uvod .section-title {
+    .uvod-section .section-title {
         font-size: clamp(1.4rem, 5vw, 1.8rem);
     }
 
