@@ -132,14 +132,14 @@ ul {
 }
 
 .bg-texture {
-    background-image: url('Obrazky/papir_pozadi.jpg');
+    background-image: url('Obrazky/papir_pozadi.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .bg-texture-dark {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('Obrazky/papir_pozadi.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('Obrazky/papir_pozadi.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
