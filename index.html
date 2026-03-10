@@ -12,7 +12,7 @@
     <meta property="og:description"
         content="Vytvářím moderní a funkční weby pro malé firmy a OSVČ, které přivádějí nové zákazníky.">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="Obrazky/favicon_klikaweby.png">
+    <link rel="icon" type="image/png" href="Obrazky/favicon_klikaweby.webp">
     <link rel="canonical" href="https://www.klikaweby.cz">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +21,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="Obrazky/Webari_anime/webar_anime_pocitac.webp">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -28,7 +29,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Jan Klika - Tvorba webových stránek",
-      "image": "Obrazky/logo_klikaweby.png",
+      "image": "Obrazky/logo_klikaweby.webp",
       "email": "j.klika@post.cz",
       "telephone": "+420 732 545 963",
       "address": {
@@ -49,7 +50,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a href="#hero" class="logo">
-                <img src="Obrazky/logo_klikaweby.png" alt="Klikaweby Logo">
+                <img src="Obrazky/logo_klikaweby.webp" alt="Klikaweby Logo">
             </a>
 
             <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="main-nav">
@@ -71,7 +72,7 @@
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
             <!-- Background element imitating the 'Aa' watermark from the image -->
-            <div class="hero-watermark">Ww</div>
+            <div class="hero-watermark" aria-hidden="true">Ww</div>
 
             <!-- Hand drawn top border -->
             <div class="hero-top-border">
@@ -95,8 +96,8 @@
                 </div>
 
                 <div class="hero-image-wrapper">
-                    <img src="Obrazky/Webari_anime/webar_anime_pocitac.png" alt="Webař pracuje na počítači"
-                        class="hero-img">
+                    <img src="Obrazky/Webari_anime/webar_anime_pocitac.webp" alt="Webař pracuje na počítači"
+                        class="hero-img" fetchpriority="high">
 
                     <!-- Bubbles around the image -->
                     <div class="bubble b-1"><i class="fa-solid fa-paintbrush mr-1"></i> Vzhled</div>
@@ -117,7 +118,7 @@
                 <div class="cards-grid cols-2">
                     <!-- Karta 1 -->
                     <div class="feature-card">
-                        <img src="Obrazky/Ikony/Jednoduche_a_prehledne.png" alt="Jednoduché a přehledné" class="icon"
+                        <img src="Obrazky/Ikony/Jednoduche_a_prehledne.webp" alt="Jednoduché a přehledné" class="icon"
                             loading="lazy">
                         <div class="feature-content">
                             <h3>Jednoduché a přehledné</h3>
@@ -129,7 +130,7 @@
 
                     <!-- Karta 2 -->
                     <div class="feature-card">
-                        <img src="Obrazky/Ikony/Funkcni_a_rychle.png" alt="Funkční a rychlé" class="icon"
+                        <img src="Obrazky/Ikony/Funkcni_a_rychle.webp" alt="Funkční a rychlé" class="icon"
                             loading="lazy">
                         <div class="feature-content">
                             <h3>Funkční a rychlé</h3>
@@ -153,7 +154,7 @@
 
                 <div class="cards-grid cols-3 mt-4">
                     <div class="offer-card reveal">
-                        <img src="Obrazky/Ikony/Tvorba_webovych_stranek.png" alt="Tvorba webových stránek" class="icon"
+                        <img src="Obrazky/Ikony/Tvorba_webovych_stranek.webp" alt="Tvorba webových stránek" class="icon"
                             loading="lazy">
                         <h4>1/ Tvorba webových stránek</h4>
                         <p>Vytvoříme webové stránky, které budou magnetem pro vyhledávače, s&nbsp;obsahem, který zaujme
@@ -162,7 +163,7 @@
                     </div>
 
                     <div class="offer-card">
-                        <img src="Obrazky/Ikony/Editace_a_pece_o_webove_stranky.png"
+                        <img src="Obrazky/Ikony/Editace_a_pece_o_webove_stranky.webp"
                             alt="Editace a péče o webové stránky" class="icon" loading="lazy">
                         <h4>2/ Editace a péče o&nbsp;webové stránky</h4>
                         <p>Udržím váše webové stránky v&nbsp;top formě – bleskově rychlé, neprůstřelně bezpečné
@@ -171,7 +172,7 @@
                     </div>
 
                     <div class="offer-card">
-                        <img src="Obrazky/Ikony/Neco_navic.png" alt="Něco navíc" class="icon" loading="lazy">
+                        <img src="Obrazky/Ikony/Neco_navic.webp" alt="Něco navíc" class="icon" loading="lazy">
                         <h4>3/ Něco navíc</h4>
                         <p>Můžu vám připravit texty na web, pomoci s&nbsp;výběrem nebo pořízením fotografií
                             a&nbsp;vytvořit jednoduché logo,</p>
@@ -189,7 +190,7 @@
                         <a href="#kontakty" class="btn btn-secondary mt-3">Konzultace zdarma</a>
                     </div>
                     <div class="intro-image">
-                        <img src="Obrazky/Ostatni/konzultace.png" alt="Konzultace a práce na webu" loading="lazy">
+                        <img src="Obrazky/Ostatni/konzultace.webp" alt="Konzultace a práce na webu" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -207,7 +208,7 @@
 
                 <div class="cards-grid cols-2 mt-4">
                     <div class="price-card reveal">
-                        <img src="Obrazky/Ikony/Web_bez_administrace.png" alt="Web bez redakčního systému" class="icon"
+                        <img src="Obrazky/Ikony/Web_bez_administrace.webp" alt="Web bez redakčního systému" class="icon"
                             loading="lazy">
                         <h4>Webová vizitka <br>(bez administrace)</h4>
                         <p>Ideální volba, pokud hledáte moderní online vizitku. Vše důležité na jedné stránce,
@@ -224,7 +225,7 @@
                     </div>
 
                     <div class="price-card primary-border">
-                        <img src="Obrazky/Ikony/Web_s_administraci.png" alt="Web s redakčním systémem" class="icon"
+                        <img src="Obrazky/Ikony/Web_s_administraci.webp" alt="Web s redakčním systémem" class="icon"
                             loading="lazy">
                         <h4>Web s&nbsp;administrací <br>(redakční systém)</h4>
                         <p>Živý web, který roste s&nbsp;vámi. Díky přehledné administraci si můžete sami měnit texty,
@@ -261,7 +262,7 @@
 
                 <div class="cards-grid cols-2">
                     <div class="price-card">
-                        <img src="Obrazky/Ikony/Udrzba.png" alt="Údržba" class="icon" loading="lazy">
+                        <img src="Obrazky/Ikony/Udrzba.webp" alt="Údržba" class="icon" loading="lazy">
                         <h4>1x údržba</h4>
                         <ul class="check-list">
                             <li>pravidelná záloha webu</li>
@@ -273,7 +274,7 @@
                     </div>
 
                     <div class="price-card">
-                        <img src="Obrazky/Ikony/Editace.png" alt="Editace" class="icon" loading="lazy">
+                        <img src="Obrazky/Ikony/Editace.webp" alt="Editace" class="icon" loading="lazy">
                         <h4>Editace</h4>
                         <ul class="check-list">
                             <li>úprava vzhledu webu</li>
@@ -299,7 +300,7 @@
 
                 <div class="service-list mt-4">
                     <div class="service-item">
-                        <img src="Obrazky/Ikony/Texty_na_web.png" alt="Texty na web" class="icon list-icon"
+                        <img src="Obrazky/Ikony/Texty_na_web.webp" alt="Texty na web" class="icon list-icon"
                             loading="lazy">
                         <div class="service-content">
                             <h4>Texty na web</h4>
@@ -312,7 +313,7 @@
                     </div>
 
                     <div class="service-item">
-                        <img src="Obrazky/Ikony/Logo.png" alt="Logo" class="icon list-icon" loading="lazy">
+                        <img src="Obrazky/Ikony/Logo.webp" alt="Logo" class="icon list-icon" loading="lazy">
                         <div class="service-content">
                             <h4>Logo</h4>
                             <p>Základní vizuální identita.<br>Vytvořím jednoduché, čisté a&nbsp;moderní logo, které bude
@@ -323,7 +324,7 @@
                     </div>
 
                     <div class="service-item">
-                        <img src="Obrazky/Ikony/Fotografie.png" alt="Fotografie" class="icon list-icon" loading="lazy">
+                        <img src="Obrazky/Ikony/Fotografie.webp" alt="Fotografie" class="icon list-icon" loading="lazy">
                         <div class="service-content">
                             <h4>Fotografie</h4>
                             <p>Pomůžu s&nbsp;výběrem vhodných fotografií z&nbsp;fotobank, případně upravím tvoje vlastní
@@ -350,7 +351,7 @@
                     <!-- Zahrnuje -->
                     <div class="acc-col">
                         <div class="acc-header flex-center mb-3">
-                            <img src="Obrazky/Ikony/Ano.png" alt="Ano" class="inline-icon" loading="lazy">
+                            <img src="Obrazky/Ikony/Ano.webp" alt="Ano" class="inline-icon" loading="lazy">
                             <h3 class="mb-0 ml-2">Co zahrnuje</h3>
                         </div>
 
@@ -399,7 +400,7 @@
                     <!-- Nezahrnuje -->
                     <div class="acc-col">
                         <div class="acc-header flex-center mb-3">
-                            <img src="Obrazky/Ikony/Ne.png" alt="Ne" class="inline-icon" loading="lazy">
+                            <img src="Obrazky/Ikony/Ne.webp" alt="Ne" class="inline-icon" loading="lazy">
                             <h3 class="mb-0 ml-2">Co nezahrnuje</h3>
                         </div>
 
@@ -462,9 +463,9 @@
         <section class="section py-6 reveal">
             <div class="container split-layout">
                 <div class="split-image">
-                    <img src="Obrazky/Lide/jan_klika.png" alt="Honza webař" class="author-img" loading="lazy"
-                        onerror="this.onerror=null; this.src='Obrazky/Lide/webar_honza_profil.png'">
-                    <!-- Added fallback image to webar_honza_profil.png since jan_klika.jpg wasn't listed, only jan_klika.png was! -->
+                    <img src="Obrazky/Lide/jan_klika.webp" alt="Honza webař" class="author-img" loading="lazy"
+                        onerror="this.onerror=null; this.src='Obrazky/Lide/webar_honza_profil.webp'">
+                    <!-- Added fallback image to webar_honza_profil.webp since jan_klika.jpg wasn't listed, only jan_klika.webp was! -->
                 </div>
                 <div class="split-text pl-text">
                     <h2 class="section-title text-left">Kdo za tím stojí?</h2>
@@ -487,7 +488,7 @@
             <div class="container container-sm">
                 <h2 class="section-title">Spolupráce při tvorbě webových stránek</h2>
                 <div class="flex-center flex-justify-center mb-5">
-                    <img src="Obrazky/Ikony/Spoluprace.png" alt="Spolupráce" class="inline-icon" loading="lazy">
+                    <img src="Obrazky/Ikony/Spoluprace.webp" alt="Spolupráce" class="inline-icon" loading="lazy">
                     <h3 class="mb-0 ml-2 text-center">Jak vzniká váš web</h3>
                 </div>
 

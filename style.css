@@ -968,7 +968,7 @@ main {
     font-family: var(--font-main);
     font-size: 0.9rem;
     font-weight: 400;
-    color: #666;
+    color: #444;
     display: inline-block;
     margin-left: 0.5rem;
 }
@@ -1039,7 +1039,7 @@ details[open] .acc-icon {
 
 .acc-content {
     padding: 0 1.2rem 1.2rem;
-    color: #555;
+    color: #444;
 }
 
 /* ==================================
@@ -1121,7 +1121,7 @@ details[open] .acc-icon {
 
 .text-small {
     font-size: 0.85rem;
-    color: #666;
+    color: #444;
 }
 
 .business-details p {
