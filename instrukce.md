@@ -345,7 +345,7 @@ Pokud chcete, abych rychleji dostal představu o vašem projektu, můžete vypln
 Dotazník: https://docs.google.com/forms/d/e/1FAIpQLSezjpJmKydRVK1zFO0OhNAXWOIBiyRMzyC-cKheNnobuI0NdQ/viewform?usp=publish-editor
 
 Jan Klika
-j.klika@post.cz
+info@klikaweby.cz
 +420 732 545 963
 Kontaktujte mě
 PO-PÁ/ 8:00-17:00
@@ -362,7 +362,7 @@ Zásady ochrany osobních údajů
 1.1 Správcem osobních údajů podle čl. 4 bod 7 nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (dále jen: „GDPR”) je Jan Klika, IČ 08479500 se sídlem Horní Bukovsko 16, 373 65 Dolní Bukovsko (dále jen: „Správce“).
 1.2 Kontaktní údaje Správce:
 Adresa: Horní Bukovsko 16, 373 65 Dolní Bukovsko
-E‑mail: j.klika@post.cz
+E‑mail: info@klikaweby.cz
 Telefon: +420 732 545 963
 1.3 Osobními údaji se rozumí veškeré informace o identifikované nebo identifikovatelné fyzické osobě; identifikovatelnou fyzickou osobou je fyzická osoba, kterou lze přímo či nepřímo identifikovat, zejména odkazem na určitý identifikátor, například jméno, identifikační číslo, lokační údaje, síťový identifikátor nebo na jeden či více zvláštních prvků fyzické, fyziologické, genetické, psychické, ekonomické, kulturní nebo společenské identity této fyzické osoby.
 1.4 Správce nejmenoval pověřence pro ochranu osobních údajů.
@@ -475,7 +475,7 @@ Zhotovitel dílo jako celek i jeho jednotlivé výstupy zpracuje bez věcných a
 8.8 Pokud Objednatel nebude schopen nebo ochoten pokračovat v realizaci Dodávky nebo dodat podklady nezbytné pro pokračování v realizaci Dodávky tak, aby byla poskytnuta v dohodnutém termínu, je povinen uhradit k tomuto termínu alikvotní částku odpovídající ceně Dodávky realizované k tomuto datu.
 9. Údržba webových stránek
 9.1 Rozsah prací spadajících do údržby webových stránek naleznete na stránce CO NABÍTÍM (oddíl 02 / EDITACE A PÉČE)
-9.2 Objednatel se zavazuje nahlásit vady bezprostředně po jejích zjištění primárně na e‑mailovou adresu: j.klika@post.cz
+9.2 Objednatel se zavazuje nahlásit vady bezprostředně po jejích zjištění primárně na e‑mailovou adresu: info@klikaweby.cz
 9.3  Zhotovitel se zavazuje zahájit úpravu zjištěných vad nejdéle do:
 a) 48 hodin u textových vad
 b) 24 hodin u grafických vad
