@@ -26,7 +26,7 @@
     /* Sizes */
     --border-radius: 16px;
     --border-radius-lg: 24px;
-    --box-shadow-soft: 0 4px 12px rgba(51, 51, 51, 0.05);
+    --box-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.08);
     --brutal-shadow: 4px 4px 0 var(--text-color);
     --brutal-border: 2px solid var(--text-color);
 }
@@ -283,10 +283,10 @@ ul {
 
 .intro-image img {
     border-radius: var(--border-radius);
-    box-shadow: var(--brutal-shadow);
-    border: var(--brutal-border);
+    box-shadow: none;
+    border: none;
     max-width: 100%;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 @media(min-width: 900px) {
@@ -359,50 +359,51 @@ ul {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 1px;
-    border-radius: 0;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: var(--transition-fast);
 }
 
-/* Neo-brutalism btn style requested by Hero section pattern */
+/* Modern btn style */
 .btn-primary {
     background-color: var(--btn-bg);
     color: var(--text-color);
-    border: var(--brutal-border);
-    box-shadow: var(--brutal-shadow);
+    border: 2px solid var(--text-color);
+    box-shadow: var(--box-shadow-soft);
     text-decoration: none;
 }
 
 .btn-primary:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(51, 51, 51, 0.1);
 }
 
 .btn-primary:active {
-    transform: translate(4px, 4px);
-    box-shadow: 0 0 0 var(--text-color);
+    transform: translateY(0);
+    box-shadow: var(--box-shadow-soft);
 }
 
 .btn-secondary {
     background-color: var(--secondary-color);
     color: var(--text-color);
-    border: var(--brutal-border);
-    box-shadow: var(--brutal-shadow);
+    border: none;
+    box-shadow: var(--box-shadow-soft);
 }
 
 .btn-secondary:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(51, 51, 51, 0.1);
 }
 
 .btn-outline {
     background: transparent;
     color: var(--text-color);
-    border: var(--brutal-border);
+    border: 2px solid var(--text-color);
 }
 
 .btn-outline:hover {
     background: var(--primary-bg);
+    transform: translateY(-2px);
 }
 
 .btn-full {
@@ -417,26 +418,28 @@ ul {
 
 /* Icons */
 .icon {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
     border-radius: 50%;
     background-color: var(--btn-bg);
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0;
+    border: none;
+    overflow: hidden;
     margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 .inline-icon {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     border-radius: 50%;
     background-color: var(--btn-bg);
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0;
+    border: none;
+    overflow: hidden;
 }
 
 /* Cards */
@@ -456,7 +459,7 @@ ul {
 .offer-card:hover,
 .price-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(51, 51, 51, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .offer-card:hover .icon,
@@ -903,8 +906,8 @@ main {
     display: block;
     margin: 0 auto;
     border-radius: var(--border-radius-lg);
-    border: var(--brutal-border);
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    box-shadow: none;
 }
 
 .service-list {
@@ -914,7 +917,7 @@ main {
 
 .service-item {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 90px 1fr;
     gap: 2rem;
     align-items: center;
     background: #fff;
@@ -928,7 +931,7 @@ main {
 
 .service-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(51, 51, 51, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .service-content {
@@ -949,8 +952,8 @@ main {
 }
 
 .list-icon {
-    width: 100px !important;
-    height: 100px !important;
+    width: 90px !important;
+    height: 90px !important;
     margin-bottom: 0 !important;
 }
 
@@ -1071,15 +1074,15 @@ details[open] .acc-icon {
     width: 2.2rem;
     height: 2.2rem;
     background: var(--secondary-color);
-    border: 2px solid var(--text-color);
-    border-radius: 50%;
+    border: none;
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-brand);
     font-weight: bold;
     transform: translateX(-25%);
-    box-shadow: 3px 3px 0 var(--text-color);
+    box-shadow: var(--box-shadow-soft);
 }
 
 .timeline-content {
@@ -1230,7 +1233,7 @@ details[open] .acc-icon {
     height: 3.5rem;
     background-color: var(--secondary-color);
     color: var(--text-color);
-    border: var(--brutal-border);
+    border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1241,7 +1244,7 @@ details[open] .acc-icon {
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-smooth);
-    box-shadow: 4px 4px 0 var(--text-color);
+    box-shadow: var(--box-shadow-soft);
 }
 
 .back-to-top.visible {
@@ -1250,13 +1253,13 @@ details[open] .acc-icon {
 }
 
 .back-to-top:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0 var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(51, 51, 51, 0.1);
 }
 
 .back-to-top:active {
-    transform: translate(2px, 2px);
-    box-shadow: 0 0 0 var(--text-color);
+    transform: translateY(0);
+    box-shadow: var(--box-shadow-soft);
 }
 
 /* ==================================
@@ -1460,9 +1463,9 @@ details[open] .acc-icon {
     }
 
     .inline-icon {
-        width: 38px;
-        height: 38px;
-        padding: 6px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
     }
 
     /* Sekce "Spolupráce" */
